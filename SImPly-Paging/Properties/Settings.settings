@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SImPly_Paging.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="cucmUsername" Type="System.String" Scope="User">
+      <Value Profile="(Default)">jtapiuser</Value>
+    </Setting>
+    <Setting Name="cucmPassword" Type="System.String" Scope="User">
+      <Value Profile="(Default)">jtapipassword</Value>
+    </Setting>
+    <Setting Name="cucmIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)">172.21.1.55</Value>
+    </Setting>
+    <Setting Name="Setting" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting1" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Setting2" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="MainSettingClass" Type="ccierants.baseclasses.UserSettings" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>
