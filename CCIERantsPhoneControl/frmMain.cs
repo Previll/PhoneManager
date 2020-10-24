@@ -5,6 +5,7 @@ using LumiSoft.Net.RTP;
 using LumiSoft.Net.SDP;
 using LumiSoft.Net.SIP.Stack;
 using NAudio.Wave;
+using NAudio;
 using System;
 using System.ComponentModel;
 using System.Drawing;
@@ -27,9 +28,7 @@ namespace CCIERantsPhoneControl
     {
 
         private string runningHWID;
-        private TempLicenseData curTempLicense;
-        private LicenseData curLicenseData;
-
+        
         private RoundButton btnKeyPad1;
         private RoundButton btnKeyPad2;
         private RoundButton btnKeyPad3;
@@ -61,7 +60,9 @@ namespace CCIERantsPhoneControl
         private SimpleHTTPClient simpleHTTP = new SimpleHTTPClient();
         private SimpleHTTPClient screenHTTP = new SimpleHTTPClient();
 
-        private RestClientPhoneControl restClientScreenshot = new RestClientPhoneControl();
+        private RestClientPhoneControl restClientScreenshot;
+
+
         private WebServer WS;
         private WebServer WS2;
 
@@ -156,53 +157,13 @@ namespace CCIERantsPhoneControl
         }
         private bool isTemplicenseDateValid()
         {
-            if ((DateTime.Now - curTempLicense.LicenseValidEndDate).TotalDays < 30)
-            {
-                Console.WriteLine("Temp License Is still valid!");
-
-                return true;
-
-            }
-            else
-            {
-                if (String.IsNullOrEmpty(curTempLicense.PayPalTransactionID))
-                {
-                    MessageBox.Show("Hi There! I noticed you have bought a License but have not yet applied your permanent License. Please go to Settings to apply your Permanent License!");
-                    Console.WriteLine("User purchased a license but never applied the full license");
-                    enableBasicLicense();
-                    return false;
-                }
-                else
-                {
-
-                    MessageBox.Show("Sorry! Your Temp license has expired!");
-                    enableBasicLicense();
-                    return false;
-                }
-            }
+            return true;
         }
         private bool checkTempHWIDfromLicense()
         {
 
 
-            Console.WriteLine("HW ID in Temp license Setting: " + curTempLicense.hwid);
-            if (curTempLicense.hwid == runningHWID)
-            {
-                // Correct HWID for license file.
-                Console.WriteLine("Correct HW ID in temp license file.");
-
-                return true;
-
-            }
-            else
-            {
-                // No mathcing hardware ID I am afraid.
-                Console.WriteLine("HW ID Doesn't match temp License File.");
-                MessageBox.Show("Sorry! This temp license doesn't match the hardware license :(");
-                enableBasicLicense();
-            }
-
-            return false;
+            return true;
         }
         private bool checkPermHWIDfromLicense()
         {
@@ -3134,16 +3095,6 @@ namespace CCIERantsPhoneControl
 
         private void InstallTempLicense()
         {
-            Console.WriteLine("generating temp license");
-            curTempLicense = new TempLicenseData();
-
-            curTempLicense.hwid = runningHWID;
-            curTempLicense.LicenseValidStartDate = DateTime.Now;
-            curTempLicense.LicenseValidEndDate = DateTime.Now.AddMinutes(4);
-            byte[] sig = LicenseLibrary.SignTempLicense(curTempLicense);
-            curTempLicense.Signature = sig;
-            Properties.Settings.Default.tempLicense = curTempLicense;
-            Properties.Settings.Default.Save();
 
         }
 

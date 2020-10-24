@@ -7,7 +7,7 @@ using System.Xml.Linq;
 
 
 
-namespace notinuse
+namespace ccierants.baseclasses
 {
     // inspired by: https://developer.cisco.com/site/sxml/documents/api-reference/risport/#selectcmdevice-status-reason-codes
 

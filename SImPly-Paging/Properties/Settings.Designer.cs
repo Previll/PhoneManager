@@ -95,15 +95,6 @@ namespace SImPly_Paging.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::ccierants.baseclasses.UserSettings MainSettingClass {
-            get {
-                return ((global::ccierants.baseclasses.UserSettings)(this["MainSettingClass"]));
-            }
-            set {
-                this["MainSettingClass"] = value;
-            }
-        }
+        
     }
 }

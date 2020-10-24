@@ -9,7 +9,7 @@ using System.Web;
 namespace ccierants.baseclasses
 {
   
-    class SimpleHTTPClient
+    public class SimpleHTTPClient
     {
         public event EventHandler<DownloadStringCompletedEventArgs> GetResponse;
         

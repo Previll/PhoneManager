@@ -7,7 +7,7 @@ using System.Drawing;
 using System.Net;
 using System.IO;
 
-namespace SImPly_Paging
+namespace ccierants.baseclasses
 {
     public class RestClientPhoneControl : ccierants.baseclasses.RestClient
     {

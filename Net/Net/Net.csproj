@@ -308,9 +308,6 @@
     <Compile Include="RTP\RTP_StreamMode.cs" />
     <Compile Include="SDP\SDP_MediaTypes.cs" />
     <Compile Include="SDP\SDP_Origin.cs" />
-    <Compile Include="SIP\Debug\wfrm_SIP_Debug.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="SIP\Proxy\SIP_ProxyHandler.cs" />
     <Compile Include="SIP\Proxy\SIP_RequestContext.cs" />
     <Compile Include="SIP\Stack\SIP_Dialog_Refer.cs" />
@@ -386,9 +383,6 @@
     <Compile Include="POP3\Client\POP3_ClientMessageCollection.cs" />
     <None Include="POP3\POP3_ExtendedCapabilities.cs" />
     <Compile Include="PortRange.cs" />
-    <Compile Include="RTP\Debug\wfrm_RTP_Debug.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="RTP\RTCP_Packet_Unknown.cs" />
     <Compile Include="RTP\RTCP_Report_Receiver.cs" />
     <Compile Include="RTP\RTCP_Report_Sender.cs" />
