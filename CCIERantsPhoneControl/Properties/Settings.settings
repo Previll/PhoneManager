@@ -1,0 +1,48 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CCIERantsPhoneControl.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="firstUse" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="phoneCount" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="recentIndex" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="firstUseDate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">08/06/2015 13:45:00</Value>
+    </Setting>
+    <Setting Name="lastUpdate" Type="System.DateTime" Scope="User">
+      <Value Profile="(Default)">08/06/2015 14:02:00</Value>
+    </Setting>
+    <Setting Name="betaExpired" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="advancedModeLast" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="basicModeLast" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ntpRetries" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="lastIP" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="tempLicense" Type="ccierants.baseclasses.TempLicenseData" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="permLicense" Type="ccierants.baseclasses.LicenseData" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="VersionSetting" Type="System.String" Scope="User">
+      <Value Profile="(Default)">0.6</Value>
+    </Setting>
+    <Setting Name="toolTips" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

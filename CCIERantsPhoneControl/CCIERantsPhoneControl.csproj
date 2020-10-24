@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1364B369-CB0C-4AC5-902A-94F61ABF610F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CCIERantsPhoneControl</RootNamespace>
+    <AssemblyName>CCIERantsPhoneControl</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>MainIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>CCIERantsPhoneControl.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\NAudio.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMsgView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMsgView.Designer.cs">
+      <DependentUpon>frmMsgView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CiscoPhoneObjectException.cs" />
+    <Compile Include="CiscoPhoneObject.cs" />
+    <Compile Include="PhoneControlLicenseClass.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScreenshotHolderClass.cs" />
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMsgView.resx">
+      <DependentUpon>frmMsgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CCIERantsPhoneControl.Properties.Resources.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Common Libraries ccierants\ccierantsCommonLibraries\ccierantsCommonLibraries.csproj">
+      <Project>{72eeab56-41a0-4cc4-9bc5-a6fa858bf17a}</Project>
+      <Name>ccierantsCommonLibraries</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Net\Net\Net.csproj">
+      <Project>{7ab36ccf-5ffd-4780-a54e-a102eca028b5}</Project>
+      <Name>Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PhoneScreenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowDown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowLeft.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowRight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Select.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowDownHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowLeftHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowRightHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ArrowUpHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SelectHover.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SelectPressed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PhoneScreenshotInitialSetup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="led_green_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="led_green_on.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="MainIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadyToCall.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="led_red_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="voicemail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="directory.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="globe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="checkbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="headset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="microphone-mute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="speaker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-0.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-8.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-pound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf\Dtmf-star.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\dtmf0.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-0_converted.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-0.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-1.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-2.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-3.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-4.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-5.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-6.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-7.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-8.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-9.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-pound.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="audio-dtmf-correctformat\Dtmf-star.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Listening.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ListeningStop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Mwi-Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="clickherebackground.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="clickherebackgroundPreview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Transparent_Black_Music_Notes_Clipart.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

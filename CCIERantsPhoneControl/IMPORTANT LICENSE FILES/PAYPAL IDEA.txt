@@ -1,0 +1,31 @@
+ private void btnDonate_Click(object sender, System.EventArgs e)
+    {
+        string url = "";
+
+        string business     = "my@paypalemail.com";  // your paypal email
+        string description  = "Donation";            // '%20' represents a space. remember HTML!
+        string country      = "AU";                  // AU, US, etc.
+        string currency     = "AUD";                 // AUD, USD, etc.
+
+        url += "https://www.paypal.com/cgi-bin/webscr" +
+            "?cmd=" + "_donations" +
+            "&business=" + business +
+            "&lc=" + country +
+            "&item_name=" + description +
+            "&currency_code=" + currency +
+            "&bn=" + "PP%2dDonationsBF";
+
+        System.Diagnostics.Process.Start(url);
+    }
+	
+	
+	receipt_id is available when i look up a sale:
+	https://developer.paypal.com/docs/api/#look-up-a-sale
+	
+	
+	http://www.withinweb.com/phpkeycodes/
+	
+	http://www.codeproject.com/Articles/383207/Selling-software-using-PayPal-IPN-as-an-eCommerce
+	https://docs.shopify.com/api/introduction/getting-started
+	http://www.e-junkie.com/ (this looks the most promising but if it's just files you will have to come up with a way)
+	
