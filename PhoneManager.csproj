@@ -1,0 +1,873 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{E75D8DD3-36D0-4CEA-8F94-FC2FFCC5BDC0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PhoneManager</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
+    <Content Include="CCIERantsPhoneControl\.gitignore" />
+    <Content Include="CCIERantsPhoneControl\ArrowDown.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowDownHover.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowLeft.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowLeftHover.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowRight.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowRightHover.png" />
+    <Content Include="CCIERantsPhoneControl\arrows-147750_1280.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowUp.png" />
+    <Content Include="CCIERantsPhoneControl\ArrowUpHover.png" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-0.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-1.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-2.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-3.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-4.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-5.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-6.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-7.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-8.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-9.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-pound.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf-correctformat\Dtmf-star.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-0.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-1.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-2.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-3.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-4.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-5.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-6.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-7.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-8.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-9.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-pound.wav" />
+    <Content Include="CCIERantsPhoneControl\audio-dtmf\Dtmf-star.wav" />
+    <Content Include="CCIERantsPhoneControl\BulkControl.png" />
+    <Content Include="CCIERantsPhoneControl\checkbox.png" />
+    <Content Include="CCIERantsPhoneControl\clickherebackground.png" />
+    <Content Include="CCIERantsPhoneControl\clickherebackgroundPreview.png" />
+    <Content Include="CCIERantsPhoneControl\directory.png" />
+    <Content Include="CCIERantsPhoneControl\globe.png" />
+    <Content Include="CCIERantsPhoneControl\headset.png" />
+    <Content Include="CCIERantsPhoneControl\help.png" />
+    <Content Include="CCIERantsPhoneControl\images.jpg" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\finalPrivateKey.txt" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\finalPublicKey.txt" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\PAYPAL IDEA.txt" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\privatekey13082015-use-for-perm-license.xml" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\privatekey13082015-use-temp.xml" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\pubkey13082015-use-for-perm.xml" />
+    <Content Include="CCIERantsPhoneControl\IMPORTANT LICENSE FILES\pubkey13082015-use-temp.xml" />
+    <Content Include="CCIERantsPhoneControl\led_green_off.png" />
+    <Content Include="CCIERantsPhoneControl\led_green_on.png" />
+    <Content Include="CCIERantsPhoneControl\led_red_black.png" />
+    <Content Include="CCIERantsPhoneControl\Listening.png" />
+    <Content Include="CCIERantsPhoneControl\ListeningStop.png" />
+    <Content Include="CCIERantsPhoneControl\MainIcon.ico" />
+    <Content Include="CCIERantsPhoneControl\mainIconSmall.bmp" />
+    <Content Include="CCIERantsPhoneControl\MainIconTransparent.ico" />
+    <Content Include="CCIERantsPhoneControl\microphone-mute.png" />
+    <Content Include="CCIERantsPhoneControl\mute.png" />
+    <Content Include="CCIERantsPhoneControl\Mwi-Icon.ico" />
+    <Content Include="CCIERantsPhoneControl\Mwi-Icon.png" />
+    <Content Include="CCIERantsPhoneControl\NAudio.dll" />
+    <Content Include="CCIERantsPhoneControl\NAudio.XML" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\ccierantsCommonLibraries.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\LumiSoft.Net.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\NAudio.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\Newtonsoft.Json.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\ccierantsCommonLibraries.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\CCIERantsPhoneControl.exe" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\LumiSoft.Net.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\NAudio.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\Newtonsoft.Json.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\ccierantsCommonLibraries.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\CCIERantsPhoneControl.exe" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\LumiSoft.Net.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\NAudio.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\Newtonsoft.Json.dll" />
+    <Content Include="CCIERantsPhoneControl\PhoneScreenshot.png" />
+    <Content Include="CCIERantsPhoneControl\PhoneScreenshotInitialSetup.png" />
+    <Content Include="CCIERantsPhoneControl\ReadyToCall.bmp" />
+    <Content Include="CCIERantsPhoneControl\ReadyToCall.ico" />
+    <Content Include="CCIERantsPhoneControl\ReadyToCall.png" />
+    <Content Include="CCIERantsPhoneControl\Select.png" />
+    <Content Include="CCIERantsPhoneControl\SelectPressed.png" />
+    <Content Include="CCIERantsPhoneControl\softkey.png" />
+    <Content Include="CCIERantsPhoneControl\speaker.png" />
+    <Content Include="CCIERantsPhoneControl\Transparent_Black_Music_Notes_Clipart.png" />
+    <Content Include="CCIERantsPhoneControl\voicemail.png" />
+    <Content Include="Net\Net\FTP\Server\readme.txt" />
+    <Content Include="Net\Net\license.txt" />
+    <Content Include="Net\Net\voicemail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".github\workflows\codeql-analysis.yml" />
+    <None Include=".github\workflows\dotnet-core-desktop.yml" />
+    <None Include=".git\config" />
+    <None Include=".git\description" />
+    <None Include=".git\HEAD" />
+    <None Include=".git\hooks\applypatch-msg.sample" />
+    <None Include=".git\hooks\commit-msg.sample" />
+    <None Include=".git\hooks\fsmonitor-watchman.sample" />
+    <None Include=".git\hooks\post-update.sample" />
+    <None Include=".git\hooks\pre-applypatch.sample" />
+    <None Include=".git\hooks\pre-commit.sample" />
+    <None Include=".git\hooks\pre-merge-commit.sample" />
+    <None Include=".git\hooks\pre-push.sample" />
+    <None Include=".git\hooks\pre-rebase.sample" />
+    <None Include=".git\hooks\pre-receive.sample" />
+    <None Include=".git\hooks\prepare-commit-msg.sample" />
+    <None Include=".git\hooks\update.sample" />
+    <None Include=".git\index" />
+    <None Include=".git\info\exclude" />
+    <None Include=".git\logs\HEAD" />
+    <None Include=".git\logs\refs\heads\master" />
+    <None Include=".git\logs\refs\heads\MigrateToNetCore" />
+    <None Include=".git\logs\refs\remotes\origin\HEAD" />
+    <None Include=".git\objects\pack\pack-e4bdfb5b09ef919ce7693a6e226e87b9915e2693.idx" />
+    <None Include=".git\objects\pack\pack-e4bdfb5b09ef919ce7693a6e226e87b9915e2693.pack" />
+    <None Include=".git\packed-refs" />
+    <None Include=".git\refs\heads\master" />
+    <None Include=".git\refs\heads\MigrateToNetCore" />
+    <None Include=".git\refs\remotes\origin\HEAD" />
+    <None Include=".vs\PhoneManager\v16\.suo" />
+    <None Include=".vs\slnx.sqlite" />
+    <None Include=".vs\VSWorkspaceState.json" />
+    <None Include="CCIERantsPhoneControl\.README.md.swp" />
+    <None Include="CCIERantsPhoneControl\App.config" />
+    <None Include="CCIERantsPhoneControl\audio-dtmf.zip" />
+    <None Include="CCIERantsPhoneControl\CCIERants Phone Control Install Guide-Use-Guide now with recording.docx" />
+    <None Include="CCIERantsPhoneControl\CCIERants Phone Control Install Guide-Use-Guide.docx" />
+    <None Include="CCIERantsPhoneControl\CCIERantsPhoneControl.csproj" />
+    <None Include="CCIERantsPhoneControl\frmMain - Backup22082015cs" />
+    <None Include="CCIERantsPhoneControl\obj\Debug\CCIERantsPhoneControl.csprojAssemblyReference.cache" />
+    <None Include="CCIERantsPhoneControl\obj\Release\CCIERantsPhoneControl.csprojAssemblyReference.cache" />
+    <None Include="CCIERantsPhoneControl\packages.config" />
+    <None Include="CCIERantsPhoneControl\PhoneControllerV0.5\CCIERants Phone Control Install Guide-Use-Guide now with recording.docx" />
+    <None Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5.zip" />
+    <None Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.5\CCIERants Phone Control Install Guide-Use-Guide now with recording.docx" />
+    <None Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6.zip" />
+    <None Include="CCIERantsPhoneControl\PhoneControllerV0.5\PhoneControllerV0.6\CCIERants Phone Control Install Guide-Use-Guide now with recording.docx" />
+    <None Include="CCIERantsPhoneControl\Properties\DataSources\CCIERantsPhoneControl.Properties.Resources.datasource" />
+    <None Include="CCIERantsPhoneControl\Properties\Settings.settings" />
+    <None Include="CCIERantsPhoneControl\README.md" />
+    <None Include="CCIERantsPhoneControl\Select.pdn" />
+    <None Include="LicenseGeneratorForCCIERantsPhoneControl\App.config" />
+    <None Include="LicenseGeneratorForCCIERantsPhoneControl\LicenseGeneratorForCCIERantsPhoneControl.csproj" />
+    <None Include="LicenseGeneratorForCCIERantsPhoneControl\obj\Debug\LicenseGeneratorForCCIERantsPhoneControl.csprojAssemblyReference.cache" />
+    <None Include="LicenseGeneratorForCCIERantsPhoneControl\obj\Release\LicenseGeneratorForCCIERantsPhoneControl.csprojAssemblyReference.cache" />
+    <None Include="LicenseGeneratorForCCIERantsPhoneControl\Properties\Settings.settings" />
+    <None Include="Net\Net\Net.csproj" />
+    <None Include="SImPly-Paging\App.config" />
+    <None Include="SImPly-Paging\obj\Debug\SImPly-Paging.csprojAssemblyReference.cache" />
+    <None Include="SImPly-Paging\packages.config" />
+    <None Include="SImPly-Paging\Properties\app.manifest" />
+    <None Include="SImPly-Paging\Properties\Settings.settings" />
+    <None Include="SImPly-Paging\SImPly-Paging.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CCIERantsPhoneControl\CiscoPhoneObject.cs" />
+    <Compile Include="CCIERantsPhoneControl\CiscoPhoneObjectException.cs" />
+    <Compile Include="CCIERantsPhoneControl\Class1.cs" />
+    <Compile Include="CCIERantsPhoneControl\frmMain.cs" />
+    <Compile Include="CCIERantsPhoneControl\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCIERantsPhoneControl\frmMsgView.cs" />
+    <Compile Include="CCIERantsPhoneControl\frmMsgView.Designer.cs">
+      <DependentUpon>frmMsgView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CCIERantsPhoneControl\obj\Debug\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="CCIERantsPhoneControl\obj\Release\.NETFramework,Version=v4.5.2.AssemblyAttributes.cs" />
+    <Compile Include="CCIERantsPhoneControl\PhoneControlLicenseClass.cs" />
+    <Compile Include="CCIERantsPhoneControl\Program.cs" />
+    <Compile Include="CCIERantsPhoneControl\Properties\AssemblyInfo.cs" />
+    <Compile Include="CCIERantsPhoneControl\Properties\Resources.Designer.cs" />
+    <Compile Include="CCIERantsPhoneControl\Properties\Settings.Designer.cs" />
+    <Compile Include="CCIERantsPhoneControl\ScreenshotHolderClass.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\frmGenerate.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\frmGenerate.Designer.cs">
+      <DependentUpon>frmGenerate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\obj\Release\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\Program.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\Properties\AssemblyInfo.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\Properties\Resources.Designer.cs" />
+    <Compile Include="LicenseGeneratorForCCIERantsPhoneControl\Properties\Settings.Designer.cs" />
+    <Compile Include="Net\Net\ABNF\ABFN.cs" />
+    <Compile Include="Net\Net\ABNF\ABFN_Group.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Alternation.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_BinVal.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_CharVal.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Concatenation.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_DecVal.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Element.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_HexVal.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Option.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_ProseVal.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Repetition.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_Rule.cs" />
+    <Compile Include="Net\Net\ABNF\ABNF_RuleName.cs" />
+    <Compile Include="Net\Net\AssemblyInfo.cs" />
+    <Compile Include="Net\Net\AsyncOP.cs" />
+    <Compile Include="Net\Net\AUTH\AuthType.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_e_Authenticate.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_e_UserInfo.cs" />
+    <Compile Include="Net\Net\AUTH\Auth_HttpDigest.cs" />
+    <Compile Include="Net\Net\AUTH\Auth_HttpDigest_NonceManager.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_DigestMD5_Challenge.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_DigestMD5_Response.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_ServerMechanism.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_ServerMechanism_CramMd5.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_ServerMechanism_DigestMd5.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_ServerMechanism_Login.cs" />
+    <Compile Include="Net\Net\AUTH\AUTH_SASL_ServerMechanism_Plain.cs" />
+    <Compile Include="Net\Net\BalanceMode.cs" />
+    <Compile Include="Net\Net\BindInfoProtocol.cs" />
+    <Compile Include="Net\Net\CircleCollection.cs" />
+    <Compile Include="Net\Net\DNS\Client\DnsCache.cs" />
+    <Compile Include="Net\Net\DNS\Client\DnsServerResponse.cs" />
+    <Compile Include="Net\Net\DNS\Client\DNS_Client.cs" />
+    <Compile Include="Net\Net\DNS\Client\DNS_ClientException.cs" />
+    <Compile Include="Net\Net\DNS\Client\DNS_ClientTransaction.cs" />
+    <Compile Include="Net\Net\DNS\Client\DNS_ClientTransactionState.cs" />
+    <Compile Include="Net\Net\DNS\Client\_OPCODE.cs" />
+    <Compile Include="Net\Net\DNS\DNS_QClass.cs" />
+    <Compile Include="Net\Net\DNS\DNS_QType.cs" />
+    <Compile Include="Net\Net\DNS\DNS_Query.cs" />
+    <Compile Include="Net\Net\DNS\DNS_RCode.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_A.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_AAAA.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_CNAME.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_HINFO.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_MX.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_NAPTR.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_NS.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_PTR.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_SOA.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_SPF.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_SRV.cs" />
+    <Compile Include="Net\Net\DNS\DNS_rr_TXT.cs" />
+    <Compile Include="Net\Net\EventArgs.cs" />
+    <Compile Include="Net\Net\ExceptionEventArgs.cs" />
+    <Compile Include="Net\Net\FTP\Client\FTP_Client.cs" />
+    <Compile Include="Net\Net\FTP\Client\FTP_ClientException.cs" />
+    <Compile Include="Net\Net\FTP\FTP_ListItem.cs" />
+    <Compile Include="Net\Net\FTP\FTP_TransferMode.cs" />
+    <Compile Include="Net\Net\FTP\Server\AuthUser_EventArgs.cs" />
+    <Compile Include="Net\Net\FTP\Server\FileSysEntry_EventArgs.cs" />
+    <Compile Include="Net\Net\FTP\Server\FTP_Server.cs" />
+    <Compile Include="Net\Net\FTP\Server\FTP_Session.cs" />
+    <Compile Include="Net\Net\HostEndPoint.cs" />
+    <Compile Include="Net\Net\HTTP\Server\HTTP_Server.cs" />
+    <Compile Include="Net\Net\HTTP\Server\HTTP_Session.cs" />
+    <Compile Include="Net\Net\ICMP\Icmp.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_Client.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_ClientException.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_Client_FetchHandler.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_Client_Fetch_Body_EArgs.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_Client_Fetch_Rfc822_EArgs.cs" />
+    <Compile Include="Net\Net\IMAP\Client\IMAP_Client_SelectedFolder.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Acl_Entry.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_ACL_Flags.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Envelope.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Body.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_BodyPeek.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_BodyS.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_BodyStructure.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Envelope.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Flags.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_InternalDate.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Rfc822.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Rfc822Header.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Rfc822Size.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Rfc822Text.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Fetch_DataItem_Uid.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Flags_SetType.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_MessageFlags.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Namespace_Entry.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Quota_Entry.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_ServerStatus.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Acl.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Capability.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Expunge.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_List.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_ListRights.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_LSub.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_MyRights.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Namespace.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Quota.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_QuotaRoot.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_ServerStatus.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_r_u_Status.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Answered.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Bcc.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Before.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Body.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Cc.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Deleted.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Draft.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Flagged.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_From.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Group.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Header.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Keyword.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Lager.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_New.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Not.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Old.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_On.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Or.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Recent.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Seen.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_SentBefore.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_SentOn.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_SentSince.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_SeqSet.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Since.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Smaller.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Subject.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Text.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_To.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Uid.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Unanswered.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Undeleted.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Undraft.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Unflagged.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Unkeyword.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Search_Key_Unseen.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_SequenceSet.cs" />
+    <Compile Include="Net\Net\IMAP\IMAP_Utils.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Append.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Copy.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_DeleteAcl.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Expunge.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Fetch.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Folder.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_GetAcl.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_GetQuota.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_GetQuotaRoot.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_List.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_ListRights.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Login.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_LSub.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_MessagesInfo.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_MyRights.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Namespace.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Rename.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Search.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Select.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_SetAcl.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Started.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_e_Store.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_Fetch_DataType.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_MessageInfo.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_Server.cs" />
+    <Compile Include="Net\Net\IMAP\Server\IMAP_Session.cs" />
+    <Compile Include="Net\Net\IO\Base64.cs" />
+    <Compile Include="Net\Net\IO\Base64Stream.cs" />
+    <Compile Include="Net\Net\IO\DataSizeExceededException.cs" />
+    <Compile Include="Net\Net\IO\FifoBuffer.cs" />
+    <Compile Include="Net\Net\IO\IncompleteDataException.cs" />
+    <Compile Include="Net\Net\IO\JunkingStream.cs" />
+    <Compile Include="Net\Net\IO\LineReader.cs" />
+    <Compile Include="Net\Net\IO\LineSizeExceededException.cs" />
+    <Compile Include="Net\Net\IO\MemoryStreamEx.cs" />
+    <Compile Include="Net\Net\IO\MultiStream.cs" />
+    <Compile Include="Net\Net\IO\PartialStream.cs" />
+    <Compile Include="Net\Net\IO\QuotedPrintableStream.cs" />
+    <Compile Include="Net\Net\IO\ReadLineEventArgs.cs" />
+    <Compile Include="Net\Net\IO\ReadWriteControlledStream.cs" />
+    <Compile Include="Net\Net\IO\SizeExceededAction.cs" />
+    <Compile Include="Net\Net\IO\SmartStream.cs" />
+    <Compile Include="Net\Net\IPBindInfo.cs" />
+    <Compile Include="Net\Net\KeyValueCollection.cs" />
+    <Compile Include="Net\Net\Log\LogEntry.cs" />
+    <Compile Include="Net\Net\Log\LogEntryType.cs" />
+    <Compile Include="Net\Net\Log\Logger.cs" />
+    <Compile Include="Net\Net\Log\WriteLogEventArgs.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_AddressList.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_DispositionNotificationOptions.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_Mailbox.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_MailboxList.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_Received.cs" />
+    <Compile Include="Net\Net\Mail\Mail_h_ReturnPath.cs" />
+    <Compile Include="Net\Net\Mail\Mail_Message.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_Address.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_AddressList.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_Group.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_Mailbox.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_MailboxList.cs" />
+    <Compile Include="Net\Net\Mail\Mail_t_TcpInfo.cs" />
+    <Compile Include="Net\Net\Mail\Mail_Utils.cs" />
+    <Compile Include="Net\Net\Media\AudioFormat.cs" />
+    <Compile Include="Net\Net\Media\AudioIn.cs" />
+    <Compile Include="Net\Net\Media\AudioInDevice.cs" />
+    <Compile Include="Net\Net\Media\AudioIn_RTP.cs" />
+    <Compile Include="Net\Net\Media\AudioOut.cs" />
+    <Compile Include="Net\Net\Media\AudioOutDevice.cs" />
+    <Compile Include="Net\Net\Media\AudioOut_RTP.cs" />
+    <Compile Include="Net\Net\Media\Codec\Audio\AudioCodec.cs" />
+    <Compile Include="Net\Net\Media\Codec\Audio\ILBC.cs" />
+    <Compile Include="Net\Net\Media\Codec\Audio\PCMA.cs" />
+    <Compile Include="Net\Net\Media\Codec\Audio\PCMU.cs" />
+    <Compile Include="Net\Net\Media\Codec\Codec.cs" />
+    <Compile Include="Net\Net\Media\WavePlayer.cs" />
+    <Compile Include="Net\Net\Media\_WaveIn.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Application.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_ApplicationPkcs7Mime.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Audio.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Image.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Message.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MessageDeliveryStatus.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MessageRfc822.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Multipart.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartAlternative.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartDigest.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartEncrypted.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartFormData.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartMixed.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartParallel.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartRelated.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartReport.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_MultipartSigned.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Provider.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_SinglepartBase.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Text.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Unknown.cs" />
+    <Compile Include="Net\Net\MIME\MIME_b_Video.cs" />
+    <Compile Include="Net\Net\MIME\MIME_DispositionTypes .cs" />
+    <Compile Include="Net\Net\MIME\MIME_EncodedWordEncoding.cs" />
+    <Compile Include="Net\Net\MIME\MIME_Encoding_EncodedWord.cs" />
+    <Compile Include="Net\Net\MIME\MIME_Entity.cs" />
+    <Compile Include="Net\Net\MIME\MIME_EntityCollection.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_Collection.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_ContentDisposition.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_ContentType.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_Parameter.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_ParameterCollection.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_Provider.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_Unparsed.cs" />
+    <Compile Include="Net\Net\MIME\MIME_h_Unstructured.cs" />
+    <Compile Include="Net\Net\MIME\MIME_MediaTypes.cs" />
+    <Compile Include="Net\Net\MIME\MIME_Message.cs" />
+    <Compile Include="Net\Net\MIME\MIME_Reader.cs" />
+    <Compile Include="Net\Net\MIME\MIME_TransferEncodings.cs" />
+    <Compile Include="Net\Net\MIME\MIME_Utils.cs" />
+    <Compile Include="Net\Net\Net_Utils.cs" />
+    <Compile Include="Net\Net\NNTP\Client\NNTP_Client.cs" />
+    <Compile Include="Net\Net\ParseException.cs" />
+    <Compile Include="Net\Net\POP3\Client\POP3_Client.cs" />
+    <Compile Include="Net\Net\POP3\Client\POP3_ClientException.cs" />
+    <Compile Include="Net\Net\POP3\Client\POP3_ClientMessage.cs" />
+    <Compile Include="Net\Net\POP3\Client\POP3_ClientMessageCollection.cs" />
+    <Compile Include="Net\Net\POP3\POP3_ExtendedCapabilities.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_Authenticate.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_DeleteMessage.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_GetMessagesInfo.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_GetMessageStream.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_GetTopOfMessage.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_e_Started.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_Server.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_ServerMessage.cs" />
+    <Compile Include="Net\Net\POP3\Server\POP3_Session.cs" />
+    <Compile Include="Net\Net\PortRange.cs" />
+    <Compile Include="Net\Net\Range_long.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_CompoundPacket.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_PacketType.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_APP.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_BYE.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_ReportBlock.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_RR.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_SDES.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_SDES_Chunk.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_SR.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Packet_Unknown.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Report_Receiver.cs" />
+    <Compile Include="Net\Net\RTP\RTCP_Report_Sender.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Address.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Clock.cs" />
+    <Compile Include="Net\Net\RTP\RTP_MultimediaSession.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Packet.cs" />
+    <Compile Include="Net\Net\RTP\RTP_PacketEventArgs.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Participant.cs" />
+    <Compile Include="Net\Net\RTP\RTP_ParticipantEventArgs.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Participant_Local.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Participant_Remote.cs" />
+    <Compile Include="Net\Net\RTP\RTP_PayloadTypes.cs" />
+    <Compile Include="Net\Net\RTP\RTP_ReceiveStream.cs" />
+    <Compile Include="Net\Net\RTP\RTP_ReceiveStreamEventArgs.cs" />
+    <Compile Include="Net\Net\RTP\RTP_SendStream.cs" />
+    <Compile Include="Net\Net\RTP\RTP_SendStreamEventArgs.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Session.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Source.cs" />
+    <Compile Include="Net\Net\RTP\RTP_SourceEventArgs.cs" />
+    <Compile Include="Net\Net\RTP\RTP_SourceState.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Source_Local.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Source_Remote.cs" />
+    <Compile Include="Net\Net\RTP\RTP_StreamMode.cs" />
+    <Compile Include="Net\Net\RTP\RTP_Utils.cs" />
+    <Compile Include="Net\Net\SDP\SDP_Attribute.cs" />
+    <Compile Include="Net\Net\SDP\SDP_Connection.cs" />
+    <Compile Include="Net\Net\SDP\SDP_MediaDescription.cs" />
+    <Compile Include="Net\Net\SDP\SDP_MediaTypes.cs" />
+    <Compile Include="Net\Net\SDP\SDP_Message.cs" />
+    <Compile Include="Net\Net\SDP\SDP_Origin.cs" />
+    <Compile Include="Net\Net\SDP\SDP_Time.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_HeaderField.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_HeaderFieldCollection.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_Message.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_MultiValueHF.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_MVGroupHFCollection.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_OptionTags.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_Parameter.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_ParameterCollection.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_ParseException.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_SingleValueHF.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_SVGroupHFCollection.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_AcceptRange.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ACValue.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_AddressParam.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_AlertParam.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_AuthenticationInfo.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_CallID.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Challenge.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ContactParam.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ContentCoding.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ContentDisposition.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Credentials.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_CSeq.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Directive.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Encoding.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ErrorUri.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Event.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_EventType.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_From.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_HiEntry.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_IdentityInfo.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Info.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Join.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Language.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_LanguageTag.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Method.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_MinSE.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_NameAddress.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_OptionTag.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_RAck.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_RCValue.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ReasonValue.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ReferredBy.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ReferSub.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Replaces.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_RetryAfter.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_RValue.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_SecMechanism.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_SessionExpires.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_SubscriptionState.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_TargetDialog.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Timestamp.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_To.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_Value.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ValueWithParams.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_ViaParm.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_t_WarningValue.cs" />
+    <Compile Include="Net\Net\SIP\Message\SIP_WarningCodes.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_AuthenticateEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_B2BUA.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_B2BUA_Call.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_ForkingMode.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_Presence.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_Proxy.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_ProxyContext.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_ProxyHandler.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_ProxyMode.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_ProxyTarget.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_Registrar.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_Registration.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_RegistrationBinding.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_RegistrationCollection.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_RegistrationEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Proxy\SIP_RequestContext.cs" />
+    <Compile Include="Net\Net\SIP\SIP_Utils.cs" />
+    <Compile Include="Net\Net\SIP\SIP_ValidateRequestEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_ClientTransaction.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_DialogState.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Invite.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Refer.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Subscribe.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Usage.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Usage_Invite.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Dialog_Usage_Subscribe.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Flow.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Hop.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Methods.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Request.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_RequestLine.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_RequestReceivedEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_RequestSender.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Response.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_ResponseCodes.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_ResponseReceivedEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_ResponseSentEventArgs.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_ServerTransaction.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Stack.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_StackState.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_StatusCodeType.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_StatusLine.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_TimerConstants.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Transaction.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_TransactionLayer.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_TransactionState.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_Transport.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_TransportException.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_TransportLayer.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_UA_Registration.cs" />
+    <Compile Include="Net\Net\SIP\Stack\SIP_UA_RegistrationState.cs" />
+    <Compile Include="Net\Net\SIP\UA\SIP_UA.cs" />
+    <Compile Include="Net\Net\SIP\UA\SIP_UA_Call.cs" />
+    <Compile Include="Net\Net\SIP\UA\SIP_UA_CallState.cs" />
+    <Compile Include="Net\Net\SIP\UA\SIP_UA_Call_EventArgs.cs" />
+    <Compile Include="Net\Net\SMTP\Client\SMTP_Client.cs" />
+    <Compile Include="Net\Net\SMTP\Client\SMTP_ClientException.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_Mode.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_Queue.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_QueueItem.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_Server.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_Session.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_SessionCompletedEventArgs.cs" />
+    <Compile Include="Net\Net\SMTP\Relay\Relay_SmartHost.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_Ehlo.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_MailFrom.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_Message.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_MessageStored.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_RcptTo.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_e_Started.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_MailFrom.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_RcptTo.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_Reply.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_Server.cs" />
+    <Compile Include="Net\Net\SMTP\Server\SMTP_Session.cs" />
+    <Compile Include="Net\Net\SMTP\SMTP_DSN_Notify.cs" />
+    <Compile Include="Net\Net\SMTP\SMTP_DSN_Ret.cs" />
+    <Compile Include="Net\Net\SMTP\SMTP_ServiceExtensions.cs" />
+    <Compile Include="Net\Net\SMTP\SMTP_t_Mailbox.cs" />
+    <Compile Include="Net\Net\SMTP\SMTP_Utils.cs" />
+    <Compile Include="Net\Net\SNTP\Client\SNTP_Client.cs" />
+    <Compile Include="Net\Net\SslMode.cs" />
+    <Compile Include="Net\Net\StringReader.cs" />
+    <Compile Include="Net\Net\STUN\Client\STUN_Client.cs" />
+    <Compile Include="Net\Net\STUN\Client\STUN_NetType.cs" />
+    <Compile Include="Net\Net\STUN\Client\STUN_Result.cs" />
+    <Compile Include="Net\Net\STUN\Message\STUN_Message.cs" />
+    <Compile Include="Net\Net\STUN\Message\STUN_MessageType.cs" />
+    <Compile Include="Net\Net\STUN\Message\STUN_t_ChangeRequest.cs" />
+    <Compile Include="Net\Net\STUN\Message\STUN_t_ErrorCode.cs" />
+    <Compile Include="Net\Net\TCP\TCP_Client.cs" />
+    <Compile Include="Net\Net\TCP\TCP_Server.cs" />
+    <Compile Include="Net\Net\TCP\TCP_ServerSession.cs" />
+    <Compile Include="Net\Net\TCP\TCP_ServerSessionEventArgs.cs" />
+    <Compile Include="Net\Net\TCP\TCP_Session.cs" />
+    <Compile Include="Net\Net\TCP\TCP_SessionCollection.cs" />
+    <Compile Include="Net\Net\TextUtils.cs" />
+    <Compile Include="Net\Net\TimerEx.cs" />
+    <Compile Include="Net\Net\UDP\UDP_DataReceiver.cs" />
+    <Compile Include="Net\Net\UDP\UDP_e_PacketReceived.cs" />
+    <Compile Include="Net\Net\UDP\UDP_PacketEventArgs.cs" />
+    <Compile Include="Net\Net\UDP\UDP_ProcessMode.cs" />
+    <Compile Include="Net\Net\UDP\UDP_Server.cs" />
+    <Compile Include="Net\Net\UPnP\Client\UPnP_Client.cs" />
+    <Compile Include="Net\Net\UPnP\NAT\UPnP_NAT_Client.cs" />
+    <Compile Include="Net\Net\UPnP\NAT\UPnP_NAT_Map.cs" />
+    <Compile Include="Net\Net\UPnP\UPnP_Device.cs" />
+    <Compile Include="Net\Net\UPnP\UPnP_Exception.cs" />
+    <Compile Include="Net\Net\URI\AbsoluteUri.cs" />
+    <Compile Include="Net\Net\URI\SIP_Uri.cs" />
+    <Compile Include="Net\Net\URI\TEL_Uri.cs" />
+    <Compile Include="Net\Net\URI\UriSchemes.cs" />
+    <Compile Include="Net\Net\vCard\DeliveryAddress.cs" />
+    <Compile Include="Net\Net\vCard\DeliveryAddressCollection.cs" />
+    <Compile Include="Net\Net\vCard\DeliveryAddressType_enum.cs" />
+    <Compile Include="Net\Net\vCard\EmailAddress.cs" />
+    <Compile Include="Net\Net\vCard\EmailAddressCollection.cs" />
+    <Compile Include="Net\Net\vCard\EmailAddressType_enum.cs" />
+    <Compile Include="Net\Net\vCard\Item.cs" />
+    <Compile Include="Net\Net\vCard\ItemCollection.cs" />
+    <Compile Include="Net\Net\vCard\Name.cs" />
+    <Compile Include="Net\Net\vCard\PhoneNumber.cs" />
+    <Compile Include="Net\Net\vCard\PhoneNumberCollection.cs" />
+    <Compile Include="Net\Net\vCard\PhoneNumberType_enum.cs" />
+    <Compile Include="Net\Net\vCard\vCard.cs" />
+    <Compile Include="Net\Net\WebDav\Client\WebDav_Client.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_MultiStatus.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_p.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_Prop.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_PropStat.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_p_Default.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_p_ResourceType.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_ResourceTypes.cs" />
+    <Compile Include="Net\Net\WebDav\WebDav_Response.cs" />
+    <Compile Include="Net\Net\WellKnownPorts.cs" />
+    <Compile Include="Net\Net\_AsyncResultState.cs" />
+    <Compile Include="Net\Net\_Debug\BitDebuger.cs" />
+    <Compile Include="Net\Net\_Obsolete\AuthHelper.cs" />
+    <Compile Include="Net\Net\_Obsolete\IMAP\IMAP_BODY.cs" />
+    <Compile Include="Net\Net\_Obsolete\IMAP\IMAP_BODY_Entity.cs" />
+    <Compile Include="Net\Net\_Obsolete\Log_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\Address.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\AddressList.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\ContentDisposition_enum.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\ContentTransferEncoding_enum.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\GroupAddress.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\HeaderField.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\HeaderFieldCollection.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\HeaderFieldParameter.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\HeaderFieldParameterCollection.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MailboxAddress.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MailboxAddressCollection.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MediaType_enum.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\Mime.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MimeEntity.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MimeEntityCollection.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\MimeUtils.cs" />
+    <Compile Include="Net\Net\_Obsolete\MIME\ParametizedHeaderField.cs" />
+    <Compile Include="Net\Net\_Obsolete\Net_Core.cs" />
+    <Compile Include="Net\Net\_Obsolete\ReadException.cs" />
+    <Compile Include="Net\Net\_Obsolete\ReadLine_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\ReadToStream_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\SaslAuthTypes.cs" />
+    <Compile Include="Net\Net\_Obsolete\ServersCore\commonDelegates.cs" />
+    <Compile Include="Net\Net\_Obsolete\ServersCore\Error_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\ServersCore\SocketBufferedWriter.cs" />
+    <Compile Include="Net\Net\_Obsolete\ServersCore\ValidateIP_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\SmtpClientEx.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketCallBackResult.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketEx.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketLogEntry.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketLogEntryType.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketLogger.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketServer.cs" />
+    <Compile Include="Net\Net\_Obsolete\SocketServerSession.cs" />
+    <Compile Include="Net\Net\_Obsolete\StreamHelper.cs" />
+    <Compile Include="Net\Net\_Obsolete\StreamLineReader.cs" />
+    <Compile Include="Net\Net\_Obsolete\WriteStream_EventArgs.cs" />
+    <Compile Include="Net\Net\_Obsolete\Write_EventArgs.cs" />
+    <Compile Include="SImPly-Paging\AXLAPIService.cs" />
+    <Compile Include="SImPly-Paging\AXLConnectorPhoneControl.cs" />
+    <Compile Include="SImPly-Paging\Class1.cs" />
+    <Compile Include="SImPly-Paging\FrmPhoneControl.cs" />
+    <Compile Include="SImPly-Paging\FrmPhoneControl.Designer.cs">
+      <DependentUpon>FrmPhoneControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SImPly-Paging\obj\Debug\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="SImPly-Paging\obj\Release\.NETFramework,Version=v4.5.AssemblyAttributes.cs" />
+    <Compile Include="SImPly-Paging\PhoneSerializer.cs" />
+    <Compile Include="SImPly-Paging\Program.cs" />
+    <Compile Include="SImPly-Paging\Properties\AssemblyInfo.cs" />
+    <Compile Include="SImPly-Paging\Properties\Resources.Designer.cs" />
+    <Compile Include="SImPly-Paging\Properties\Settings.Designer.cs" />
+    <Compile Include="SImPly-Paging\RestClientPhoneControl.cs" />
+    <Compile Include="SImPly-Paging\SimpleHTTPClient.cs" />
+    <Compile Include="SImPly-Paging\StructsAndEnums.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CCIERantsPhoneControl\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCIERantsPhoneControl\frmMsgView.resx">
+      <DependentUpon>frmMsgView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CCIERantsPhoneControl\Properties\Resources.resx" />
+    <EmbeddedResource Include="LicenseGeneratorForCCIERantsPhoneControl\frmGenerate.resx">
+      <DependentUpon>frmGenerate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LicenseGeneratorForCCIERantsPhoneControl\Properties\Resources.resx" />
+    <EmbeddedResource Include="SImPly-Paging\FrmPhoneControl.resx">
+      <DependentUpon>FrmPhoneControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SImPly-Paging\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".git\objects\info\" />
+    <Folder Include=".git\refs\tags\" />
+    <Folder Include="CCIERantsPhoneControl\bin\Debug\" />
+    <Folder Include="CCIERantsPhoneControl\bin\Release\" />
+    <Folder Include="LicenseGeneratorForCCIERantsPhoneControl\bin\Debug\" />
+    <Folder Include="LicenseGeneratorForCCIERantsPhoneControl\bin\Release\" />
+    <Folder Include="SImPly-Paging\bin\Debug\" />
+    <Folder Include="SImPly-Paging\bin\Release\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
