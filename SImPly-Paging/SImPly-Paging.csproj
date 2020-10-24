@@ -9,8 +9,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SImPly_Paging</RootNamespace>
     <AssemblyName>SImPly-Paging</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -41,29 +42,14 @@
     <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Atapi, Version=1.4.0.0, Culture=neutral, PublicKeyToken=6148c7b92dc86471, processorArchitecture=AMD64">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\ATAPI.2013.1.04.00\lib\net40\Atapi.dll</HintPath>
-    </Reference>
-    <Reference Include="ITapi3, Version=1.0.0.3, Culture=neutral, PublicKeyToken=36377d9f6f1f4883, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\..\Temp\ITapi3.dll</HintPath>
-    </Reference>
     <Reference Include="LSTCommon">
       <HintPath>.\LSTCommon.dll</HintPath>
     </Reference>
     <Reference Include="MSR.LST.Net.Rtp">
       <HintPath>.\MSR.LST.Net.Rtp.dll</HintPath>
     </Reference>
-    <Reference Include="NAudio">
-      <HintPath>..\packages\NAudio.1.7.3\lib\net35\NAudio.dll</HintPath>
-    </Reference>
     <Reference Include="NetworkingBasics">
       <HintPath>.\NetworkingBasics.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Newtonsoft.Json.7.0.1-beta3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,8 +66,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\..\..\Shared C Classes for Inheritance\AXLConnector-Inheritable.cs" />
-    <Compile Include="..\..\..\Shared C Classes for Inheritance\RestClient-Inheritable.cs" />
     <Compile Include="AXLAPIService.cs" />
     <Compile Include="AXLConnectorPhoneControl.cs" />
     <Compile Include="Class1.cs" />
@@ -108,8 +92,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\app.manifest">
       <SubType>Designer</SubType>
     </None>
@@ -130,10 +114,25 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Common Libraries ccierants\ccierantsCommonLibraries\ccierantsCommonLibraries.csproj">
-      <Project>{72eeab56-41a0-4cc4-9bc5-a6fa858bf17a}</Project>
-      <Name>ccierantsCommonLibraries</Name>
+    <ProjectReference Include="..\CCIERantsPhoneControl\CCIERantsPhoneControl.csproj">
+      <Project>{1364b369-cb0c-4ac5-902a-94f61abf610f}</Project>
+      <Name>CCIERantsPhoneControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Net\Net\Net.csproj">
+      <Project>{7ab36ccf-5ffd-4780-a54e-a102eca028b5}</Project>
+      <Name>Net</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="ATAPI">
+      <Version>2018.3.9</Version>
+    </PackageReference>
+    <PackageReference Include="NAudio">
+      <Version>1.10.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>12.0.3</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

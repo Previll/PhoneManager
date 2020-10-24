@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CCIERantsPhoneControl</RootNamespace>
     <AssemblyName>CCIERantsPhoneControl</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -57,6 +57,7 @@
     <StartupObject>CCIERantsPhoneControl.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Build.Conversion.v4.0" />
     <Reference Include="NAudio, Version=1.7.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>.\NAudio.dll</HintPath>
@@ -108,7 +109,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="packages.config" />
     <None Include="Properties\DataSources\CCIERantsPhoneControl.Properties.Resources.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -323,6 +323,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Transparent_Black_Music_Notes_Clipart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DotImaging.GenericImage">
+      <Version>4.8.3</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Windows.Compatibility">
+      <Version>3.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
